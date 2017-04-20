@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "homepage": "http://cuidadoso.github.io/components-factory",
+  "author": "cuidadoso",
   "dependencies": {
     "history": "^4.6.1",
     "react": "^15.4.2",
