@@ -1,8 +1,8 @@
 {
-  "name": "ui",
+  "name": "components-factory",
   "version": "0.1.0",
   "private": true,
-  "homepage": "http://cuidadoso.github.io/topjava10",
+  "homepage": "http://cuidadoso.github.io/components-factory",
   "dependencies": {
     "history": "^4.6.1",
     "react": "^15.4.2",
