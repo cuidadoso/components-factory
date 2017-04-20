@@ -5,6 +5,7 @@
   "homepage": "http://cuidadoso.github.io/components-factory",
   "author": "cuidadoso",
   "dependencies": {
+    "@kadira/storybook-deployer": "^1.2.0",
     "history": "^4.6.1",
     "react": "^15.4.2",
     "react-dom": "^15.4.2",
@@ -38,7 +39,8 @@
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook",
+    "build-storybook": "build-storybook -s public -o .out",
+    "deploy-storybook": "storybook-to-ghpages",
     "predeploy": "yarn run build",
     "deploy": "gh-pages -d build",
     "start-server": "node server.js topjava"
