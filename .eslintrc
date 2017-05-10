@@ -260,9 +260,9 @@
     "max-params": [2, 4],
     "no-bitwise": 2,
 
-    "no-console": 1,
+    "no-console": 0,
     "arrow-body-style": 0,
-    "no-underscore-dangle": 1,
+    "no-underscore-dangle": 0,
     "global-require": 1,
     "react/jsx-first-prop-new-line": 1,
     "no-restricted-syntax": [2, "WithStatement"],

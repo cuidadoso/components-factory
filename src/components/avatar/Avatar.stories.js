@@ -2,7 +2,7 @@ import React from 'react';
 import { storiesOf } from '@kadira/storybook';
 import { withKnobs, text } from '@kadira/storybook-addon-knobs';
 
-import Avatar from './Avatar';
+import { Avatar } from './';
 
 const initialImage = 'https://commons.wikimedia.org/wiki/File:Loading_icon.gif';
 const srcImage = 'http://www.artfulstudio.ru/images/af_avatargallery/a-1297877929.gif';

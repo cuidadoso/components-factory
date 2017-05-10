@@ -4,8 +4,8 @@ const autoprefixer = require('autoprefixer');
 
 module.exports = {
   // cheap-eval-source-map is faster, inline-source-map gives better debug experience
-  devtool: 'cheap-eval-source-map',
-  //devtool: 'inline-source-map',
+  // devtool: 'cheap-eval-source-map',
+  devtool: 'inline-source-map',
   entry: [
     'eventsource-polyfill',
     'webpack-hot-middleware/client',

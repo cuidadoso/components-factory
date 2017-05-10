@@ -3,7 +3,7 @@ import ReactImageFallback from 'react-image-fallback';
 import cn from 'classnames';
 import './Avatar.css';
 
-class Avatar extends Component {
+export default class Avatar extends Component {
   static displayName = 'Avatar';
   static propTypes = {
     children: pt.string,
@@ -37,5 +37,3 @@ class Avatar extends Component {
     );
   }
 }
-
-export default Avatar;
