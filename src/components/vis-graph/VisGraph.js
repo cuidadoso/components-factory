@@ -8,17 +8,17 @@ import { inGraph, options, events } from './Constants';
 
 export default class ExampleGraph extends Component {
 
-  constructor({ initialGraph }) {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
-      graph: initialGraph
+      graph: inGraph
     };
   }
 
   @autobind
   clickHandler() {
     const { graph } = this.state;
-    const nodes = Array.from(inGraph.nodes);
+    const nodes = Array.from(graph.nodes);
 
     this.counter = this.counter || 5;
     this.counter++;
