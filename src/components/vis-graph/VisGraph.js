@@ -1,37 +1,51 @@
 /**
  * Created by apyreev on 30-May-17.
  */
-import React, { Component, PropTypes as pt } from 'react';
-import uuid from 'uuid';
+import React, { Component } from 'react';
+import { autobind } from 'core-decorators';
+import Graph from './Graph';
+import { inGraph, options, events } from './Constants';
 
-export default class VisGraph extends Component {
+export default class ExampleGraph extends Component {
 
-  static propTypes = {
-    identifier: pt.object,
-    style: pt.string
-  };
-
-  static defaultProps = {
-    style: null
-  };
-
-  constructor(props) {
-    super(props);
-    const { identifier } = props;
-
-    // this.updateGraph = this.updateGraph.bind(this);
+  constructor({ initialGraph }) {
+    super();
     this.state = {
-      identifier : identifier !== undefined ? identifier : uuid.v4()
+      graph: initialGraph
     };
   }
 
-  render() {
-    const { identifier } = this.state;
-    const { style } = this.props;
+  @autobind
+  clickHandler() {
+    const { graph } = this.state;
+    const nodes = Array.from(inGraph.nodes);
 
+    this.counter = this.counter || 5;
+    this.counter++;
+    if (Math.random() > 0.5) {
+      nodes.pop();
+      this.setState({ graph: { ...graph, nodes } });
+    } else {
+      this.setState({
+        graph: {
+          ...graph,
+          nodes: [
+                        { id: this.counter, label: `Node ${this.counter}`, color: '#41e0c9' },
+            ...nodes
+          ],
+          edges: [
+                        { from: graph.nodes[Math.floor(Math.random() * graph.nodes.length)].id, to: this.counter },
+            ...graph.edges
+          ]
+        }
+      });
+    }
+  }
+
+  render() {
     return (
-      <div id={identifier} style={style}>
-        identifier
+      <div onClick={this.clickHandler.bind(this)}>
+        <Graph graph={this.state.graph} options={options} events={events}/>
       </div>
     );
   }

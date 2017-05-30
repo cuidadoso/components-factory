@@ -1,7 +1,8 @@
 /**
  * Created by apyreev on 10-May-17.
  */
-import React, { PropTypes as pt } from 'react';
+import React from 'react';
+import pt from 'prop-types';
 import { autobind } from 'core-decorators';
 import Select from 'react-select';
 import './SelectMenu.css';

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes as pt } from 'react';
+import React, { Component } from 'react';
+import pt from 'prop-types';
 import './Button.css';
 
 class Button extends Component {

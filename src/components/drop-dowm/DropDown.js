@@ -1,7 +1,7 @@
 /**
  * Created by apyreev on 10-May-17.
  */
-import React, { Component, PropTypes as pt } from 'react';
+import React, { Component } from 'react';
 import { DropdownButton, MenuItem } from 'react-bootstrap';
 // import '../../styles/bootstrup.css';
 

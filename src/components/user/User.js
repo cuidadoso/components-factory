@@ -1,7 +1,7 @@
 /**
  * Created by Alejandro on 28.03.2017.
  */
-import React, { Component, PropTypes as pt } from 'react';
+import React, { Component } from 'react';
 
 class User extends Component {
   render() {

@@ -1,4 +1,5 @@
-import React, { Component, PropTypes as pt } from 'react';
+import React, { Component } from 'react';
+import pt from 'prop-types';
 import ReactImageFallback from 'react-image-fallback';
 import cn from 'classnames';
 import './Avatar.css';
